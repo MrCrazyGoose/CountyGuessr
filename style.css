@@ -1,0 +1,317 @@
+/* @keyframes correct {
+    from {background-color: white;}
+    to {background-color: lime;}
+}
+
+@keyframes reset {
+    to {background-color: white;}
+} */
+
+
+
+body {
+    background-image: url("map.png");
+    background-repeat: no-repeat;
+    background-size: 1200px auto;
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 40px;
+    color: red;
+    text-align: center;
+    position: relative;
+    top: 500px;
+    left: -250px;
+}
+
+/* img {
+    width: 800px;
+    height: auto;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; 
+} */
+
+button {
+    position: relative;
+    background-color: white;
+    outline-color: black;
+    outline-width: 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.animateIncorrect{
+    animation: correct 0.5s;
+  }
+
+.animateCorrect{
+    animation: incorrect 0.5s;
+  }
+
+.animateReset{
+    animation: reset 0.5s;
+  }
+
+button:hover {
+    background-color: silver;
+}
+
+#allegany {
+    left: 230px; 
+    top: 30px;
+}
+
+#carroll {
+    left: 608px; 
+    top: 60px;
+}
+
+#harford {
+    left: 753px; 
+    top: 60px;
+}
+
+#stmarys {
+    left: 650px; 
+    top: 454px;
+}
+
+#annearundel {
+    left: 610px; 
+    top: 230px;
+}
+
+#cecil {
+    left: 745px; 
+    top: 45px;
+}
+
+#howard {
+    left: 460px; 
+    top: 155px;
+}
+
+#somerset {
+    left: 735px; 
+    top: 515px;
+}
+
+#baltimorecity {
+    left: 469px; 
+    top: 136px;
+}
+
+#charles {
+    left: 340px; 
+    top: 390px;
+}
+
+#kent {
+    left: 550px; 
+    top: 137px;
+}
+
+#talbot {
+    left: 480px; 
+    top: 315px;
+}
+
+#baltimore {
+    left: 320px; 
+    top: 70px;
+}
+
+#dorchester {
+    left: 440px; 
+    top: 410px;
+}
+
+#montgomery {
+    left: 120px; 
+    top: 190px;
+}
+
+#washington {
+    left: -50px; 
+    top: 30px;
+}
+
+#calvert {
+    left: 203px; 
+    top: 370px;
+}
+
+#frederick {
+    left: -33px; 
+    top: 83px;
+}
+
+#princegeorges {
+    left: 75px; 
+    top: 290px;
+}
+
+#wicomico {
+    left: 350px; 
+    top: 435px;
+}
+
+#caroline {
+    left: 260px; 
+    top: 275px;
+}
+
+#garrett {
+    left: -635px; 
+    top: 55px;
+}
+
+#queenannes {
+    left: 140px; 
+    top: 220px;
+}
+
+#worcester {
+    left: 255px; 
+    top: 500px;
+}
+
+
+
+
+/* #allegany.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#carroll.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#harford.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#stmarys.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#annearundel.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#cecil.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#howard.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#somerset.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#baltimorecity.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#charles.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#kent.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#talbot.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#baltimore.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#dorchester.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#montgomery.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#washington.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#calvertv.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#frederick.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#princegeorges.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#wicomico.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#caroline.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#garrett.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#queenannes.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+#worcester.colorTrans {
+    animation: colorChange 2s linear 0s initial;
+}
+
+
+
+
+/* button.colorTrans{
+    animation: colorChange 2s linear 0s initial;
+} */
+
+/* @keyframes colorChange {
+    from {background-color: white;}
+    to {background-color: red;}
+} */
+
+/* <button type="button" id="Allegany County">?</button>
+<button type="button" id="Carroll County">?</button>
+<button type="button" id="Harford County">?</button>
+<button type="button" id="St Mary's County">?</button>
+<button type="button" id="Anne Arundel County">?</button>
+<button type="button" id="Cecil County">?</button>
+<button type="button" id="Howard County">?</button>
+<button type="button" id="Somerset County">?</button>
+<button type="button" id="Baltimore City">?</button>
+<button type="button" id="Charles County">?</button>
+<button type="button" id="Kent County">?</button>
+<button type="button" id="Talbot County">?</button>
+<button type="button" id="Baltimore County">?</button>
+<button type="button" id="Dorchester County">?</button>
+<button type="button" id="Montgomery County">?</button>
+<button type="button" id="Washington County">?</button>
+<button type="button" id="Calvert County">?</button>
+<button type="button" id="Frederick County">?</button>
+<button type="button" id="Prince George's County">?</button>
+<button type="button" id="Wicomico County">?</button>
+<button type="button" id="Caroline County">?</button>
+<button type="button" id="Garrett County">?</button>
+<button type="button" id="Queen Anne's County">?</button>
+<button type="button" id="Worcester County">?</button> */
