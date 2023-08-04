@@ -4,22 +4,39 @@ counties = ["Allegany County", "Carroll County", "Harford County", "St. Mary's C
 "Wicomico County", "Caroline County", "Garrett County", "Queen Anne's County", "Worcester County"];
 let answered = 0;
 let correct = 0;
-button = document.getElementsByTagName("button");
-let county;
+let buttons = [];
+let county = null;
 let accuracy = 0;
 let countyCompare;
+let timer = 0;
+
+// create buttons
+let btnContainer = document.querySelector("#map");
+for (let c of counties) {
+    let btn = document.createElement("button");
+    btn.id =  String(c).replace("County", "").replaceAll(" ", "").replace("'", "").replace(".", "").toLowerCase();
+    btn.addEventListener("click", buttonClick);
+    btn.innerText = "?";
+    btnContainer.append(btn);
+}
 
 function question() {
-    let arrayEle = Math.floor(Math.random() * (counties.length - 1));
+    let arrayEle = Math.floor(Math.random() * counties.length);
     county = counties[arrayEle];
-    document.querySelector("#instructions").innerHTML = "Click on " + county + "!";
+    document.querySelector("#instructions").innerText = "Click on " + county + "!";
     counties.splice(arrayEle, 1);
     console.log(county);
 }
 
+let intId = setInterval(() => {
+    timer = timer + 1;
+    document.querySelector("#timer").innerText = "Timer: " + timer + " seconds";
+}, 1000);
+
 question();
 
-function buttonClick(clickedID) {
+function buttonClick(event) {
+    let clickedID = event.currentTarget.id;
     // function changeColor(animateClass) {
     //     $(function() {
     //         $("#" + clickedID)
@@ -31,7 +48,7 @@ function buttonClick(clickedID) {
     //         });
     //         });
     // }
-    if (answered < 25) {
+    if (counties.length > 0) {
         // document.getElementByID(clickedID).addEventListener("click", function() {
         countyCompare = String(county).replace("County", "").replaceAll(" ", "").replace("'", "").replace(".", "").toLowerCase();
         console.log("activated");
@@ -65,8 +82,10 @@ function buttonClick(clickedID) {
     }
     else {
         accuracy = (correct/24)*100;
-        alert("Game over! Your answered " + correct + " questions correctly with an accuracy of around " + Math.round(accuracy) + "%. Refresh to play again!");
-        return(accuracy);
+        document.querySelector("#instructions").innerText = "Game over! Your answered " + correct + " questions correctly with an accuracy of around " + Math.round(accuracy) + "% in " + timer + " seconds!";
+        alert("Game over! Your answered " + correct + " questions correctly with an accuracy of around " + Math.round(accuracy) + "% in " + timer + " seconds!");
+        clearInterval(intId);
+        return;
     };
         
 };
